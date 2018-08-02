@@ -98,7 +98,6 @@ public class RecipeStepFragment extends Fragment implements View.OnClickListener
         void onRecipeNextPreviousSelected(int position, ArrayList<DetailRecipe> detailRecipes);
     }
 
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         Bundle bundle = this.getArguments();

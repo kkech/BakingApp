@@ -45,8 +45,14 @@ public class DetailsActivity extends AppCompatActivity implements DetailsFragmen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_details);
         ButterKnife.bind(this);
+        if(savedInstanceState != null) {
+            if (savedInstanceState.get("No video") == null) {
+                return;
+            }
+        }
 
         getSupportActionBar().setTitle(R.string.details_activity);
 
@@ -55,7 +61,7 @@ public class DetailsActivity extends AppCompatActivity implements DetailsFragmen
 
         twoPane = twoPaneView != null && twoPaneView.getVisibility() == View.VISIBLE;
         // set the orientation of the device
-        if(twoPane) {
+        if (twoPane) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
         Bundle bundle = new Bundle();
@@ -66,11 +72,13 @@ public class DetailsActivity extends AppCompatActivity implements DetailsFragmen
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        if(!twoPane) {
+        if (!twoPane) {
             fragmentManager.beginTransaction().add(R.id.content_details_frag, frag).commit();
-        }else{
+        } else {
             fragmentManager.beginTransaction().add(R.id.recipe_details, frag).commit();
         }
+
+
     }
 
     public void onRecipeDetailSelected(int position,ArrayList<DetailRecipe> detailRecipes){
