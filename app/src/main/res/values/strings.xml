@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Baking App</string>
+
+    <string name="details_activity">Recipe Details</string>
+    <string name="recipe_ingredients_activity">Recipe Ingredients</string>
+    <string name="details_recipe_ingredients">Recipe Ingredients</string>
+
+    <string name="ingredient_header_value">Ingredient</string>
+    <string name="measure_header_value">Measure</string>
+    <string name="quantity_header_value">Quantity</string>
+
+    <string name="content_description_image_error">Cannot Load Error Image</string>
+    <string name="content_description_image_no_video">Cannot Load No Video Image</string>
+    <string name="content_description_image_recipe">Cannot Load Recipe Image</string>
+    <string name="content_description_image_background">Cannot Load Background Image</string>
+
+    <string name="error_view">An error has been occurred!Please check your internet connection and try again.</string>
+</resources>

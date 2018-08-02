@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zero_dp">0dp</dimen>
+
+    <dimen name="recycler_view_margin_value">16dp</dimen>
+
+    <!-- recipe step -->
+    <dimen name="recipe_step_margin_value">12dp</dimen>
+    <dimen name="instructions_text_view_size_value">20sp</dimen>
+    <dimen name="step_image_view_height_value">260dp</dimen>
+
+    <!-- ingredient item -->
+    <dimen name="ingredient_text_view_size_value">16sp</dimen>
+    <dimen name="ingredient_header_text_size_value">20sp</dimen>
+
+    <!-- list item -->
+    <dimen name="image_view_height_value">260dp</dimen>
+    <dimen name="text_view_margin_value">16dp</dimen>
+    <dimen name="text_view_size_value">20sp</dimen>
+
+    <!-- details item-->
+    <dimen name="two_pane_margin_right_value">8dp</dimen>
+    <dimen name="recipe_details_width_value">400dp</dimen>
+
+    <!-- widget -->
+    <dimen name="min_width">80dp</dimen>
+    <dimen name="min_height">80dp</dimen>
+    <dimen name="widget_recipe_item_text_size">14sp</dimen>
+    <dimen name="widget_ingredient_item_text_size">10sp</dimen>
+    <dimen name="padding_widget">4dp</dimen>
+    <dimen name="widget_title_height">80dp</dimen>
+</resources>

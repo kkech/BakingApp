@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/recycler_view_margin_value"
+        tools:context=".MainActivity" />
+
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:id="@+id/error_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/recycler_view_margin_value"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/image_view_height_value"
+                android:layout_height="@dimen/image_view_height_value"
+                android:layout_marginBottom="@dimen/recipe_step_margin_value"
+                android:scaleType="centerInside"
+                android:src="@drawable/error_image_view"
+                android:contentDescription="@string/content_description_image_error" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/error_view"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_view_size_value" />
+        </LinearLayout>
+    </ScrollView>
+</merge>

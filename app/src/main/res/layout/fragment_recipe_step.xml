@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer_buttons"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/details_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/recipe_step_margin_value"
+            android:paddingRight="@dimen/recipe_step_margin_value"
+            android:paddingTop="@dimen/recipe_step_margin_value">
+
+            <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                android:id="@+id/video_recipe_step"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/step_image_view_height_value" />
+
+            <ImageView
+                android:id="@+id/no_video_found"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/step_image_view_height_value"
+                android:src="@drawable/no_video_found"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/content_description_image_no_video" />
+
+            <TextView
+                android:id="@+id/instructions_step_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/recipe_step_margin_value"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/instructions_text_view_size_value" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/previous_section"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/recipe_step_margin_value"
+            android:backgroundTint="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/next_section"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/recipe_step_margin_value"
+            android:backgroundTint="@color/colorAccent" />
+
+    </LinearLayout>
+
+</RelativeLayout>
